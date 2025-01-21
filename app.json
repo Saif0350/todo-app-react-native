@@ -24,6 +24,7 @@
     },
     "plugins": [
       "expo-router",
+      "react-native-bottom-tabs",
       [
         "expo-splash-screen",
         {
@@ -33,6 +34,7 @@
           "backgroundColor": "#ffffff"
         }
       ]
+    
     ],
     "experiments": {
       "typedRoutes": true
