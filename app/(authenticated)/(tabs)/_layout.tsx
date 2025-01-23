@@ -1,19 +1,20 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { Colors } from "@/constants/Colors";
 
 const Layout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#000",
-        tabBarInactiveTintColor: "#888",
+        tabBarActiveTintColor: Colors.primary,
+        tabBarInactiveTintColor: Colors.dark,
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: "bold",
         },
         tabBarStyle: {
-          height: 60, // Adjust the height of the tab bar
-          backgroundColor: "#f8f8f8", // Tab bar background color
+          height: 80,
+          backgroundColor: "#f8f8f8",
         },
       }}
     >
@@ -21,12 +22,13 @@ const Layout = () => {
       <Tabs.Screen
         name="today"
         options={{
-          title: "Today",
+          title: "Sign In",
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "calendar" : "calendar-outline"}
               size={24}
-              color={focused ? "#000" : "#888"}
+              color={focused ? Colors.primary : Colors.dark}
             />
           ),
         }}
@@ -35,12 +37,13 @@ const Layout = () => {
       <Tabs.Screen
         name="upcoming"
         options={{
-          title: "Upcoming",
+          title: "Sign Up",
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "calendar-sharp" : "calendar-outline"}
               size={24}
-              color={focused ? "#000" : "#888"}
+              color={focused ? Colors.primary : Colors.dark}
             />
           ),
         }}
@@ -49,12 +52,13 @@ const Layout = () => {
       <Tabs.Screen
         name="search"
         options={{
-          title: "Search",
+          title: "Forgot",
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "search" : "search-outline"}
               size={24}
-              color={focused ? "#000" : "#888"}
+              color={focused ? Colors.primary : Colors.dark}
             />
           ),
         }}
@@ -64,12 +68,28 @@ const Layout = () => {
       <Tabs.Screen
         name="browse"
         options={{
-          title: "Browse",
+          title: "Reset",
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "document-text" : "document-text-outline"}
               size={24}
-              color={focused ? "#000" : "#888"}
+              color={focused ? Colors.primary : Colors.dark}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="otp"
+        options={{
+          title: "Otp",
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? "options" : "options-outline"}
+              size={24}
+              color={focused ? Colors.primary : Colors.dark}
             />
           ),
         }}

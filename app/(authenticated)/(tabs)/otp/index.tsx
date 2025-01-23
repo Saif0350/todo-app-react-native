@@ -1,14 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
+import OtpComp from "@/components/OtpComp";
 
 const Page = () => {
   return (
-    <View className="bg-black">
-      <Text>Page</Text>
-    </View>
+    <>
+      <OtpComp />
+    </>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default Page;

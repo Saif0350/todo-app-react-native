@@ -6,6 +6,10 @@ export const Colors = {
   dark: '#635E5E',
   lightText: '#a6a6a6',
   lightBorder: '#d9d9d9',
+  NewMain: "#4b47a5",
+  NewMain2: "#645de3",
+  NewButton: "#242424",
+  NewButton2: "2dd4d5"
 };
 
 export const DATE_COLORS = {

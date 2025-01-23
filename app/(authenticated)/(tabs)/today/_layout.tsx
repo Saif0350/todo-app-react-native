@@ -10,14 +10,7 @@ const Layout = () => {
         contentStyle: { backgroundColor: Colors.background },
       }}
     >
-      <Stack.Screen
-        name="index"
-        options={{
-          title: "Today",
-          headerLargeTitle: true,
-          // headerRight: () => <MoreButton pageName="Today" />,
-        }}
-      />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
     </Stack>
   );
 };

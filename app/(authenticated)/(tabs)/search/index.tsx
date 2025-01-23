@@ -1,12 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
+import ForgotPassword from "@/components/ForgotPassword";
 
 const Page = () => {
-  return (
-    <View>
-      <Text>Page</Text>
-    </View>
-  );
+  return <ForgotPassword />;
 };
 
 export default Page;
