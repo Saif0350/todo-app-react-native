@@ -1,9 +1,19 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import ForgotPassword from "@/components/ForgotPassword";
+import Fab from "@/components/Fab";
 
 const Page = () => {
-  return <ForgotPassword />;
+  return (
+    <>
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <View>
+          <Text>Seach</Text>
+        </View>
+      </ScrollView>
+      <Fab />
+    </>
+  );
 };
 
 export default Page;

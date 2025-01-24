@@ -4,6 +4,9 @@ import { tokenCache } from "@/utils/cache";
 import { ActivityIndicator, LogBox, View } from "react-native";
 import { Suspense, useEffect } from "react";
 import { Colors } from "@/constants/Colors";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Toaster } from "sonner-native";
+LogBox.ignoreLogs(["Clerk: Clerk has been loaded with development keys"]);
 
 const CLERK_PUBLISHABLE_KEY = process.env
   .EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY as string;
@@ -69,7 +72,10 @@ const RootLayout = () => {
     >
       <ClerkLoaded>
         <Suspense fallback={<Loading />}>
-          <InitialLayout />
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            <Toaster />
+            <InitialLayout />
+          </GestureHandlerRootView>
         </Suspense>
       </ClerkLoaded>
     </ClerkProvider>

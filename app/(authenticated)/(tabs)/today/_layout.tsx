@@ -1,5 +1,6 @@
 import { Stack } from "expo-router";
 import { Colors } from "@/constants/Colors";
+import MoreButtons from "@/components/MoreButtons";
 // import MoreButton from "@/components/MoreButton";
 
 const Layout = () => {
@@ -10,7 +11,14 @@ const Layout = () => {
         contentStyle: { backgroundColor: Colors.background },
       }}
     >
-      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="index"
+        options={{
+          title: "Today",
+          headerLargeTitle: true,
+          headerRight: () => <MoreButtons pageName="Today" />,
+        }}
+      />
     </Stack>
   );
 };

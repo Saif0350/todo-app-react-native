@@ -22,7 +22,7 @@ const Layout = () => {
       <Tabs.Screen
         name="today"
         options={{
-          title: "Sign In",
+          title: "Today",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
@@ -37,7 +37,7 @@ const Layout = () => {
       <Tabs.Screen
         name="upcoming"
         options={{
-          title: "Sign Up",
+          title: "Upcoming",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
@@ -52,7 +52,7 @@ const Layout = () => {
       <Tabs.Screen
         name="search"
         options={{
-          title: "Forgot",
+          title: "Search",
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
@@ -65,22 +65,8 @@ const Layout = () => {
       />
 
       {/* Browse Tab */}
-      <Tabs.Screen
-        name="browse"
-        options={{
-          title: "Reset",
-          headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? "document-text" : "document-text-outline"}
-              size={24}
-              color={focused ? Colors.primary : Colors.dark}
-            />
-          ),
-        }}
-      />
 
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="otp"
         options={{
           title: "Otp",
@@ -88,6 +74,21 @@ const Layout = () => {
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "options" : "options-outline"}
+              size={24}
+              color={focused ? Colors.primary : Colors.dark}
+            />
+          ),
+        }}
+      /> */}
+
+      <Tabs.Screen
+        name="browse"
+        options={{
+          title: "Browse",
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? "document-text" : "document-text-outline"}
               size={24}
               color={focused ? Colors.primary : Colors.dark}
             />
